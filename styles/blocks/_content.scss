@@ -1,0 +1,21 @@
+.content {
+	padding-top: 40px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 40px;
+
+	@include tablet {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+
+	&__wrapper {
+		grid-column: span 3;
+		display: grid;
+		grid-auto-flow: dense;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: var(--grid-row-gap);
+		column-gap: var(--grid-column-gap);
+	}
+}

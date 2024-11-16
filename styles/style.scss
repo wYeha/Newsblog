@@ -1,0 +1,18 @@
+@import 'normalize',
+'fonts',
+'media',
+'vars',
+'mixins',
+'globals',
+'utils';
+
+@import './blocks/header';
+@import './blocks/logo';
+@import './blocks/cross-button';
+@import './blocks/burger';
+@import './blocks/mobile-overlay';
+@import './blocks/hero';
+@import './blocks/content';
+@import './blocks/sidebar';
+@import './blocks/email-form';
+@import './blocks/news-card';

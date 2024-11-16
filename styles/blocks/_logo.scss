@@ -1,0 +1,33 @@
+.logo {
+
+	&__circles {
+		@include square (48px);
+		position: relative;
+
+		@include mobile {
+			@include square (40px);
+		}
+
+		&::after,
+		&::before {
+			position: absolute;
+			content: '';
+		}
+
+		&::after {
+			@include square(100%);
+			border-radius: 50px;
+			background-color: var(--color-accent);
+		}
+
+		&::before {
+			@include square(54%);
+			bottom: 0;
+			right: -0.4%;
+			z-index: 1;
+			border-radius: 50px;
+			background-color: var(--color-white);
+			box-shadow: 0 4px 4px 0 rgba(57, 70, 136, 0.18);
+		}
+	}
+}

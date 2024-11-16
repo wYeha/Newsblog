@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Новостной блог</title>
+
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__inner container">
+			<a class="header__logo logo" href="./index.html">
+				<div class="logo__circles"></div>
+			</a>
+			<nav class="header__menu hidden-mobile">
+				<ul class="header__list">
+					<li class="header__item">
+						<a class="header__link is-current" href="#">Главная</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#">О нас</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#">Контакты</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#">Поиск</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link phone accent-text" href="tel:+798788787">
+							<img src="./images/phone-call.svg" alt="" width="14" height="14" loading="lazy">
+							<span>+7 (987) 887-87</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<button class="header__burger-menu burger-button visible-mobile" type="button"
+				onclick="mobileOverlay.showModal()">
+				<span class="visually-hidden">Открыть меню навигации</span>
+			</button>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="hero"></div>
+		<h1 class="visually-hidden">Блог новостей</h1>
+
+		<section class="content container">
+
+			<h2 class="visually-hidden">Последние новости</h2>
+
+
+			<div class="content__wrapper">
+				<article class="news-card news-card--3x2">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+				<article class="news-card news-card--2x2">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+				<article class="news-card news-card--1x2 news-card--accent">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+				<article class="news-card news-card--1x2 news-card--accent">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+				<article class="news-card news-card--2x1">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+				<article class="news-card news-card--2x1">
+					<div class="news-card__category">
+						<a href="#!">Категория 1</a>
+					</div>
+					<h3 class="news-card__title">
+						<a href="#!">
+							Управление ИТ-активами – скучная рутина или творческая задача?
+						</a>
+					</h3>
+					<div class="news-card__text">
+						<p>Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в крупной
+							компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+							проверить, нужен ли он вообще. </p>
+					</div>
+					<time class="news-card__date date" datetime="2020-12-13">13 дек 2020</time>
+				</article>
+			</div>
+
+
+
+			<aside class="sidebar">
+				<h2 class="sidebar__title title">Популярные новости</h2>
+				<ul class="sidebar__list">
+					<li class="sidebar__item">
+						<article class="sidebar__news">
+							<h3 class="sidebar__news-title">
+								<a class="sidebar__news-link" title="ITAM&SAMDay – самая настоящая удача!" href="#!">ITAM&SAMDay – самая
+									настоящая удача!</a>
+							</h3>
+							<time class="sidebar__date date" datetime="2020-12-13">13 дек 2020</time>
+						</article>
+					</li>
+					<li class="sidebar__item">
+						<article class="sidebar__news">
+							<h3 class="sidebar__news-title">
+								<a class="sidebar__news-link"
+									title="Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и Oracle, но не знали, у кого спросить ооооооооочень длинное слово слово слово слово слово слово"
+									href="#!">Секреты лицензирования. Всё, что вы хотели знать про Microsoft,
+									SAP и Oracle, но не знали, у кого спросить ооооооооочень длинное слово слово слово слово слово слово
+									слово</a>
+							</h3>
+							<time class="sidebar__date date" datetime="2020-12-10">10 дек 2020</time>
+						</article>
+					</li>
+					<li class="sidebar__item">
+						<article class="sidebar__news">
+							<h3 class="sidebar__news-title">
+								<a class="sidebar__news-link"
+									title="Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже должны были измениться?"
+									href="#!">Менеджмент XXI века. Надо ли готовиться к изменениям или мы
+									давно уже должны были измениться?</a>
+							</h3>
+							<time class="sidebar__date date" datetime="2020-12-5">5 дек 2020</time>
+						</article>
+					</li>
+				</ul>
+
+				<div class="sidebar__form-wrapper">
+					<h2 class="text-center">Подписка на рассылку</h2>
+					<form class="sidebar__form email-form" method="POST" action="/subscribe">
+
+						<label class="visually-hidden" for="email">Введите ваш email:</label>
+						<input class="email-form__input" placeholder="Email@gmail.com" type="email" id="email" name="email"
+							required>
+
+						<button class="email-form__button" title="Подписаться" type="submit">
+							<span class="white-text">Подписаться</span>
+							<img src="./images/right-arrow.svg" alt="" width="20" height="20" loading="lazy">
+						</button>
+					</form>
+				</div>
+
+
+			</aside>
+
+		</section>
+
+	</main>
+
+
+	<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+		<form class="mobile-overlay__close-button-wrapper" method="dialog">
+			<button class="mobile-overlay__close-button cross-button" type="submit">
+				<span class="visually-hidden">Закрыть меню навигации</span>
+			</button>
+		</form>
+		<div class="mobile-overlay__body">
+			<ul class="mobile-overlay__list">
+				<li class="mobile-overlay__item">
+					<a href="#" class="mobile-overlay__link is-current">Главная</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="#" class="mobile-overlay__link">О нас</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="#" class="mobile-overlay__link">Контакты</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="#" class="mobile-overlay__link">Поиск</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a class="mobile-overlay__link phone accent-text" href="tel:+798788787">
+						<img src="./images/phone-call.svg" alt="" width="14" height="14" loading="lazy">
+						<span>+7 (987) 887-87</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</dialog>
+</body>
+
+</html>

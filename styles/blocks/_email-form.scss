@@ -1,0 +1,43 @@
+.email-form {
+
+	display: flex;
+	flex-direction: column;
+	row-gap: 21px;
+
+	&__label {}
+
+	&__input {
+		border-radius: 20px;
+		padding-inline: 30px;
+		height: 50px;
+		width: 100%;
+		border: none;
+		font-size: 18px;
+		background-color: var(--color-light-grey);
+		color: rgba(47, 34, 34, 0.6);
+		@include focus(var(--color-accent));
+
+		&::placeholder {
+			color: var(--color-dark-light);
+		}
+
+		@include hover {
+			background-color: var(--color-main-background);
+		}
+	}
+
+	&__button {
+		@include reset-button;
+		background-color: var(--color-accent);
+		height: 50px;
+		border-radius: 20px;
+		@include flex-center;
+		column-gap: 10px;
+		width: 100%;
+		font-size: 18px;
+
+		@include hover {
+			background-color: var(--color-accent-alt);
+		}
+	}
+}

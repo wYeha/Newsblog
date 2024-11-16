@@ -1,0 +1,18 @@
+.hero {
+	background-image: url('../../images/hero/hero-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+
+	@include tablet {
+		height: 250px;
+	}
+
+	@include mobile {
+		height: 200px;
+	}
+
+	@include mobile-s {
+		height: 150px;
+	}
+}

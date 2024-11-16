@@ -1,0 +1,42 @@
+:root {
+	--color-accent: #5D71DD;
+	--color-accent-alt: #6C7DD8;
+	--color-white: #FFFFFF;
+	--color-main-background: #F9F9F9;
+	--color-light-grey: #F5F5F5;
+	--color-dark: #2F2222;
+	--color-dark-light: rgba(47, 34, 34, 0.4);
+	--color-accent-light: rgba(93, 113, 221, 0.05);
+	--color-accent-light-hover: rgba(93, 113, 221, 0.15);
+
+	--font-family-base: 'Futura PT';
+	--box-shadow: 4px 8px 40px 0 rgba(8, 24, 111, 0.2);
+
+	--container-width: 1400px;
+	--container-padding-x: 42px;
+
+	@include tablet {
+		--container-padding-x: 20px;
+	}
+
+	--border: 1px solid transparent;
+
+	--border-radius-cards: 20px;
+
+	@include mobile {
+		--border-radius-cards: 10px;
+	}
+
+	--grid-row-gap: 40px;
+	--grid-column-gap: 40px;
+
+	@include tablet {
+		--grid-row-gap: 20px;
+	}
+
+	@include mobile {
+		--grid-column-gap: 20px;
+	}
+
+	--transition: 0.2s;
+}
