@@ -27,6 +27,11 @@
 
 	&__pagination {
 		margin-top: 80px;
+		margin-bottom: 100px;
+
+		@include desktop-s {
+			margin-bottom: 0;
+		}
 	}
 
 	&__load-more {
@@ -49,9 +54,18 @@
 			background-color: var(--color-accent-alt);
 
 			img {
-				transform: rotate(360deg);
-				transition: .6s;
+				animation: rotate .6s;
 			}
 		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }

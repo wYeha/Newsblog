@@ -599,6 +599,12 @@ h2 {
 }
 .content__pagination {
   margin-top: 80px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1288px) {
+  .content__pagination {
+    margin-bottom: 0;
+  }
 }
 .content__load-more {
   margin-top: 40px;
@@ -625,8 +631,7 @@ h2 {
     background-color: var(--color-accent-alt);
   }
   .content__load-more-button:hover img {
-    transform: rotate(360deg);
-    transition: 0.6s;
+    animation: rotate 0.6s;
   }
 }
 @media (hover: none) {
@@ -634,11 +639,18 @@ h2 {
     background-color: var(--color-accent-alt);
   }
   .content__load-more-button:active img {
-    transform: rotate(360deg);
-    transition: 0.6s;
+    animation: rotate 0.6s;
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .sidebar {
   position: sticky;
   width: 100%;
