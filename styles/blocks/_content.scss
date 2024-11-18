@@ -5,17 +5,53 @@
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 40px;
 
-	@include tablet {
+	@include desktop-s {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-
-	&__wrapper {
+	&__main {
 		grid-column: span 3;
+	}
+
+	&__list {
 		display: grid;
 		grid-auto-flow: dense;
 		grid-template-columns: 1fr 1fr 1fr;
 		row-gap: var(--grid-row-gap);
 		column-gap: var(--grid-column-gap);
+
+		@include tablet {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__pagination {
+		margin-top: 80px;
+	}
+
+	&__load-more {
+		margin-top: 40px;
+		@include flex-center;
+	}
+
+	&__load-more-button {
+		@include reset-button;
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		background-color: var(--color-accent);
+		color: var(--color-white);
+		border-radius: 20px;
+		padding-inline: 68px;
+		height: 50px;
+
+		@include hover {
+			background-color: var(--color-accent-alt);
+
+			img {
+				transform: rotate(360deg);
+				transition: .6s;
+			}
+		}
 	}
 }

@@ -4,7 +4,17 @@
 	flex-direction: column;
 	row-gap: 21px;
 
-	&__label {}
+	@include desktop-s {
+		flex-direction: row;
+		margin-inline: auto;
+		column-gap: 20px;
+		max-width: 644px;
+		width: 100%;
+	}
+
+	@include mobile {
+		flex-direction: column;
+	}
 
 	&__input {
 		border-radius: 20px;
@@ -15,7 +25,6 @@
 		font-size: 18px;
 		background-color: var(--color-light-grey);
 		color: rgba(47, 34, 34, 0.6);
-		@include focus(var(--color-accent));
 
 		&::placeholder {
 			color: var(--color-dark-light);
@@ -39,5 +48,14 @@
 		@include hover {
 			background-color: var(--color-accent-alt);
 		}
+
+		@include desktop-s {
+			max-width: 244px;
+		}
+
+		@include mobile {
+			max-width: 100%;
+		}
+
 	}
 }

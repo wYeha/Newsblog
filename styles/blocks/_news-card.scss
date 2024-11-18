@@ -15,12 +15,10 @@
 
 
 	&__category {
-		@include flex-center;
 		color: var(--color-accent);
 		background-color: var(--color-accent-light);
 		border-radius: 8px;
-		height: 37px;
-		padding-inline: 16px;
+		padding: 8px 16px;
 		position: relative;
 		transition: var(--transition);
 		z-index: 1;
@@ -54,6 +52,12 @@
 		p {
 			color: var(--color-dark-light);
 			font-size: 18px;
+
+			@include max-lines(6);
+
+			@include mobile-s {
+				@include max-lines(4);
+			}
 		}
 	}
 
@@ -68,6 +72,15 @@
 		grid-column: span 3;
 		grid-row: span 2;
 		max-height: 280px;
+
+		p {
+			@include max-lines(3);
+		}
+
+		@include tablet {
+			grid-column: span 2;
+			padding: 40px;
+		}
 	}
 
 	&--2x2 {
@@ -105,22 +118,60 @@
 
 			&__text {
 				display: none;
+
+				@include tablet {
+					display: block;
+				}
 			}
 
 			&__title {
 				padding-top: 20px;
 
-				display: -webkit-box;
-				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
+				a {
+					@include max-lines(2);
+				}
 			}
 
 			&__date {
 				top: 30px;
 			}
 		}
+
+		@include tablet {
+			max-height: 400px;
+			grid-row: span 2;
+		}
 	}
+
+	&--2x2,
+	&--2x1,
+	&--1x2 {
+		@include tablet {
+			grid-column: span 1;
+		}
+	}
+
+	&--2x2,
+	&--2x1,
+	&--1x2,
+	&--3x2 {
+		.news-card {
+			&__title {
+				padding-top: 20px;
+			}
+		}
+
+		@include tablet {
+			padding: 40px;
+		}
+
+		@include mobile {
+			padding: 30px;
+			grid-column: span 2;
+			max-height: 350px;
+		}
+	}
+
 
 	&--accent {
 		background-color: var(--color-accent);
@@ -164,6 +215,62 @@
 					color: var(--color-dark-light);
 				}
 			}
+		}
+	}
+
+	&--imaged-bg {
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		transition: var(--transition);
+
+		@include hover {
+			box-shadow: var(--box-shadow-darker);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.15);
+			border-radius: inherit;
+		}
+
+		.news-card {
+
+			&__category {
+				z-index: 2;
+				background-color: rgba(255, 255, 255, 0.2);
+
+				@include hover {
+					background-color: rgba(255, 255, 255, 0.4);
+				}
+			}
+
+			&__title,
+			&__text {
+				z-index: 1;
+			}
+
+			&__category,
+			&__title {
+
+				a {
+					color: var(--color-white);
+				}
+			}
+
+			&__text {
+				p {
+					color: var(--color-white);
+				}
+			}
+
+			&__date {
+				color: var(--color-white);
+				font-weight: 400;
+			}
+
 		}
 	}
 }

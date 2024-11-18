@@ -11,11 +11,12 @@
 
 	--font-family-base: 'Futura PT';
 	--box-shadow: 4px 8px 40px 0 rgba(8, 24, 111, 0.2);
+	--box-shadow-darker: 4px 8px 40px 0 rgba(8, 24, 111, 0.4);
 
 	--container-width: 1400px;
 	--container-padding-x: 42px;
 
-	@include tablet {
+	@include mobile {
 		--container-padding-x: 20px;
 	}
 
@@ -30,12 +31,12 @@
 	--grid-row-gap: 40px;
 	--grid-column-gap: 40px;
 
-	@include tablet {
-		--grid-row-gap: 20px;
+	@include desktop-s {
+		--grid-column-gap: 20px;
 	}
 
-	@include mobile {
-		--grid-column-gap: 20px;
+	@include tablet {
+		--grid-row-gap: 20px;
 	}
 
 	--transition: 0.2s;

@@ -46,9 +46,3 @@ h2 {
 	font-size: 24px;
 	color: var(--color-dark);
 }
-
-a,
-button,
-input {
-	@include focus(var(--color-dark));
-}

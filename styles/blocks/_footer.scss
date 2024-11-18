@@ -1,0 +1,33 @@
+.footer {
+	padding-block: 40px;
+	background-color: var(--color-accent-light);
+
+	&__inner {
+		@include flex-center;
+		flex-direction: column;
+	}
+
+	&__logo {
+		margin-bottom: 40px;
+	}
+
+	&__menu {
+		padding-bottom: 64px;
+		display: flex;
+		column-gap: 60px;
+
+		@include mobile-s {
+			flex-direction: column;
+			row-gap: 24px;
+			text-align: center;
+		}
+	}
+
+	&__link {
+		font-size: 18px;
+	}
+
+	&__copyright {
+		font-size: 14px;
+	}
+}
