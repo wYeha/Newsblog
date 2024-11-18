@@ -1249,6 +1249,27 @@ h2 {
 }
 .footer__link {
   font-size: 18px;
+  position: relative;
+}
+.footer__link::after {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--color-dark);
+  top: 100%;
+}
+@media (hover: hover) {
+  .footer__link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .footer__link:active::after {
+    width: 100%;
+  }
 }
 .footer__copyright {
   font-size: 14px;
