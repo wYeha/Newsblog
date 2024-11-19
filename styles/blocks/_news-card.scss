@@ -1,13 +1,17 @@
 .news-card {
+	flex: 1;
 	background-color: var(--color-white);
-	height: 400px;
 	border-radius: 20px;
-	padding: 40px 120px 0 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	position: relative;
 	transition: var(--transition);
+	min-width: calc(320px - var(--container-padding-x) * 2);
+
+	@include mobile {
+		min-height: 350px;
+	}
 
 	@include hover {
 		box-shadow: var(--box-shadow);
@@ -54,10 +58,6 @@
 			font-size: 18px;
 
 			@include max-lines(6);
-
-			@include mobile-s {
-				@include max-lines(4);
-			}
 		}
 	}
 
@@ -68,30 +68,19 @@
 		font-size: 16px;
 	}
 
-	&--3x2 {
-		grid-column: span 3;
-		grid-row: span 2;
-		max-height: 280px;
-
-		p {
-			@include max-lines(3);
-		}
+	&--large {
+		padding: 40px 120px 0 40px;
 
 		@include tablet {
-			grid-column: span 2;
-			padding: 40px;
+			padding: 40px 40px 0 40px;
 		}
 	}
 
-	&--2x2 {
-		grid-column: span 2;
-		grid-row: span 2;
+	&--medium {
 		padding: 40px 40px 0 40px;
 	}
 
-	&--1x2 {
-		grid-column: span 1;
-		grid-row: span 2;
+	&--small {
 		padding: 40px 30px 0 30px;
 
 		.news-card {
@@ -108,70 +97,27 @@
 		}
 	}
 
-	&--2x1 {
-		grid-column: span 2;
-		grid-row: span 1;
-		max-height: 180px;
+	&--extra-small {
 		padding: 30px 40px 0 40px;
 
 		.news-card {
+			&__title {
+				padding-top: 20px;
+				@include max-lines(2);
+			}
 
 			&__text {
 				display: none;
-
-				@include tablet {
-					display: block;
-				}
-			}
-
-			&__title {
-				padding-top: 20px;
-
-				a {
-					@include max-lines(2);
-				}
 			}
 
 			&__date {
 				top: 30px;
+				right: 40px;
+				bottom: auto;
+				left: auto;
 			}
 		}
-
-		@include tablet {
-			max-height: 400px;
-			grid-row: span 2;
-		}
 	}
-
-	&--2x2,
-	&--2x1,
-	&--1x2 {
-		@include tablet {
-			grid-column: span 1;
-		}
-	}
-
-	&--2x2,
-	&--2x1,
-	&--1x2,
-	&--3x2 {
-		.news-card {
-			&__title {
-				padding-top: 20px;
-			}
-		}
-
-		@include tablet {
-			padding: 40px;
-		}
-
-		@include mobile {
-			padding: 30px;
-			grid-column: span 2;
-			max-height: 350px;
-		}
-	}
-
 
 	&--accent {
 		background-color: var(--color-accent);

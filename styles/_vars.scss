@@ -28,16 +28,5 @@
 		--border-radius-cards: 10px;
 	}
 
-	--grid-row-gap: 40px;
-	--grid-column-gap: 40px;
-
-	@include desktop-s {
-		--grid-column-gap: 20px;
-	}
-
-	@include tablet {
-		--grid-row-gap: 20px;
-	}
-
 	--transition: 0.2s;
 }
